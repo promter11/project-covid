@@ -1,0 +1,32 @@
+.footer {
+  &-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+
+    .nav-list {
+      &__link {
+        transition: color 0.25s ease-in-out;
+
+        &:hover {
+          color: $main-color;
+        }
+      }
+    }
+
+    .nav-list,
+    .social {
+      &__link {
+        &:not(:last-child) {
+          margin-right: 40px;
+        }
+      }
+    }
+  }
+
+  &-block {
+    text-align: center;
+  }
+}

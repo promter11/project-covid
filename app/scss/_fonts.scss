@@ -1,65 +1,35 @@
 @font-face {
-  font-family: "Montserrat";
-  src: url("../app/fonts/Montserrat/Montserrat-Light.eot");
-  src: url("../app/fonts/Montserrat/Montserrat-Light.eot?#iefix")
+  font-family: "Red Hat Display";
+  src: url("../fonts/Red Hat Display/RedHatDisplay-Regular.eot");
+  src: url("../fonts/Red Hat Display/RedHatDisplay-Regular.eot?#iefix")
       format("embedded-opentype"),
-    url("../app/fonts/Montserrat/Montserrat-Light.woff") format("woff"),
-    url("../app/fonts/Montserrat/Montserrat-Light.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  src: url("../app/fonts/Montserrat/Montserrat-Regular.eot");
-  src: url("../app/fonts/Montserrat/Montserrat-Regular.eot?#iefix")
-      format("embedded-opentype"),
-    url("../app/fonts/Montserrat/Montserrat-Regular.woff") format("woff"),
-    url("../app/fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+    url("../fonts/Red Hat Display/RedHatDisplay-Regular.woff2") format("woff2"),
+    url("../fonts/Red Hat Display/RedHatDisplay-Regular.woff") format("woff"),
+    url("../fonts/Red Hat Display/RedHatDisplay-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Montserrat";
-  src: url("../app/fonts/Montserrat/Montserrat-Medium.eot");
-  src: url("../app/fonts/Montserrat/Montserrat-Medium.eot?#iefix")
+  font-family: "Red Hat Display";
+  src: url("../fonts/Red Hat Display/RedHatDisplay-Medium.eot");
+  src: url("../fonts/Red Hat Display/RedHatDisplay-Medium.eot?#iefix")
       format("embedded-opentype"),
-    url("../app/fonts/Montserrat/Montserrat-Medium.woff") format("woff"),
-    url("../app/fonts/Montserrat/Montserrat-Medium.ttf") format("truetype");
+    url("../fonts/Red Hat Display/RedHatDisplay-Medium.woff2") format("woff2"),
+    url("../fonts/Red Hat Display/RedHatDisplay-Medium.woff") format("woff"),
+    url("../fonts/Red Hat Display/RedHatDisplay-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Montserrat";
-  src: url("../app/fonts/Montserrat/Montserrat-SemiBold.eot");
-  src: url("../app/fonts/Montserrat/Montserrat-SemiBold.eot?#iefix")
+  font-family: "Red Hat Display";
+  src: url("../fonts/Red Hat Display/RedHatDisplay-Bold.eot");
+  src: url("../fonts/Red Hat Display/RedHatDisplay-Bold.eot?#iefix")
       format("embedded-opentype"),
-    url("../app/fonts/Montserrat/Montserrat-SemiBold.woff") format("woff"),
-    url("../app/fonts/Montserrat/Montserrat-SemiBold.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  src: url("../app/fonts/Montserrat/Montserrat-Bold.eot");
-  src: url("../app/fonts/Montserrat/Montserrat-Bold.eot?#iefix")
-      format("embedded-opentype"),
-    url("../app/fonts/Montserrat/Montserrat-Bold.woff") format("woff"),
-    url("../app/fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
+    url("../fonts/Red Hat Display/RedHatDisplay-Bold.woff2") format("woff2"),
+    url("../fonts/Red Hat Display/RedHatDisplay-Bold.woff") format("woff"),
+    url("../fonts/Red Hat Display/RedHatDisplay-Bold.ttf") format("truetype");
   font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  src: url("../app/fonts/Montserrat/Montserrat-Black.eot");
-  src: url("../app/fonts/Montserrat/Montserrat-Black.eot?#iefix")
-      format("embedded-opentype"),
-    url("../app/fonts/Montserrat/Montserrat-Black.woff") format("woff"),
-    url("../app/fonts/Montserrat/Montserrat-Black.ttf") format("truetype");
-  font-weight: 900;
   font-style: normal;
 }

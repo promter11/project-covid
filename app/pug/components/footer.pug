@@ -1,2 +1,20 @@
+- var linkNames = ["Overview", "Contagion", "Symptomps", "Prevention"];
+- var socialInfo = [{"path": "../img/svg/social/facebook.svg", "link": "facebook.com", "social": "Facebook"}, {"path": "../img/svg/social/youtube.svg", "link": "youtube.com", "social": "YouTube"}, {"path": "../img/svg/social/vimeo.svg", "link": "vimeo.com", "social": "Vimeo"}, {"path": "../img/svg/social/twitter.svg", "link": "twitter.com", "social": "Twitter"}];
+
 footer.footer
-  span All right reserved
+  .container
+    nav.footer-nav
+      a(class="footer-block__link", href="/")
+        img(class="footer-block__logo", src="../img/svg/logo.svg", alt="Logo")
+      ul.nav-list
+        li.nav-list__item
+          each name in linkNames
+            a(class="nav-list__link", href="/") #{name}
+      .social
+        each social in socialInfo
+          a(class="social__link", href=social.link)
+            img(class="social__icon", src=social.path, alt=social.social)
+    .footer-block
+      span.footer-block__disclaimer
+        | 2020 @ All rights reserved by
+        | <a class="footer-block__link" href="pixelspark.co">pixelspark.co</a>

@@ -1,3 +1,29 @@
+- var linkNames = ["Overview", "Contagion", "Symptomps", "Prevention"];
+
 header.header
-  nav.header-nav
-    a.header-nav__link Link
+  .container
+    nav.header-nav
+      a(class="header-nav__link", href="/")
+        img(class="header-nav__logo", src="../img/svg/logo.svg", alt="Logo")
+      ul.nav-list
+        li.nav-list__item
+          each name in linkNames
+            a(class="nav-list__link", href="/") #{name}
+          button(class="nav-list__button" type="button") Contact
+      .nav-burger
+        - for (var i = 0; i < 3; i++)
+          span.nav-burger__item
+    .header-content
+      .content-info
+        h3.content-info__suptitle COVID-19 Alert
+        h1.content-info__title Stay at home quarantine to stop corona virus
+        p.content-info__description
+          | There is no specific medicine to prevent or treat coronavirus
+          | disease (COVID-19). People may need supportive care to.
+        button(class="content-info__button", type="button") Let us help
+      .content-img
+        img(
+          class="content-img__image",
+          src="../img/svg/illustrations/header.svg",
+          alt="Illustration"
+        )

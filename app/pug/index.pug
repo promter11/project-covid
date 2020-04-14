@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title Start Template
+    title COVID-19 Landing Page
 
     meta(charset="utf8")
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
@@ -10,7 +10,10 @@ html
     link(rel="stylesheet", href="../css/main.min.css")
   body
     include ./components/header.pug
-
+    main
+      include ./components/about.pug
+      include ./components/contagion.pug
+      include ./components/symptomps.pug
     include ./components/footer.pug
 
     script(src="../js/scripts.min.js")

@@ -1,0 +1,17 @@
+.symptomps {
+  overflow: hidden;
+
+  &-header {
+    text-align: center;
+
+    &__description {
+      max-width: 720px;
+
+      margin: 0 auto 80px auto;
+    }
+  }
+
+  &-content {
+    text-align: center;
+  }
+}
