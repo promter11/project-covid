@@ -6,16 +6,6 @@
 
     margin-bottom: 20px;
 
-    .nav-list {
-      &__link {
-        transition: color 0.25s ease-in-out;
-
-        &:hover {
-          color: $main-color;
-        }
-      }
-    }
-
     .nav-list,
     .social {
       &__link {
@@ -23,6 +13,11 @@
           margin-right: 40px;
         }
       }
+    }
+
+    .social {
+      display: flex;
+      align-items: center;
     }
   }
 

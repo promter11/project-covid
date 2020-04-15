@@ -1,0 +1,81 @@
+-
+  var actionItems = [
+    {
+      "number": "01",
+      "title": "Weak masks",
+      "text":
+        "Continually seize impactful vortals rather than future-proof supply chains.\
+        Uniquely exploit emerging niches via fully tested meta-services. Competently pursue\
+        standards compliant leadership skills vis-a-vis pandemic 'outside the box'\
+        thinking. Objectively",
+      "imgPath": "../img/svg/illustrations/actions/action-1.svg"
+    },
+    {
+      "number": "02",
+      "title": "Wash your hands",
+      "text":
+        "Continually seize impactful vortals rather than future-proof supply chains.\
+        Uniquely exploit emerging niches via fully tested meta-services. Competently\
+        pursue standards compliant leadership skills vis-a-vis pandemic 'outside the\
+        box' thinking. Objectively Continually seize impactful vortals",
+      "imgPath": "../img/svg/illustrations/actions/action-2.svg"
+    },
+    {
+      "number": "03",
+      "title": "Use nose - rag",
+      "text":
+        "Continually seize impactful vortals rather than future-proof supply\
+        chains. Uniquely exploit emerging niches via fully tested meta-services.\
+        Competently pursue standards compliant leadership skills vis-a-vis pandemic\
+        'outside the box' thinking. Objectively",
+      "imgPath": "../img/svg/illustrations/actions/action-3.svg"
+    },
+    {
+      "number": "04",
+      "title": "Avoid contacts",
+      "text":
+        "Continually seize impactful vortals rather than future-proof supply chains.\
+        Uniquely exploit emerging niches via fully tested meta-services.\
+        Competently pursue standards compliant leadership skills vis-a-vis pandemic",
+      "imgPath": "../img/svg/illustrations/actions/action-4.svg"
+    }
+  ];
+
+section.actions
+  .container
+    .actions-header
+      h3.actions-header__suptitle Covid-19
+      h1.actions-header__title What should we do
+      p.actions-header__description
+        | Corona viruses are a type of virus. There are many different
+        | kinds, and some cause disease. A newly identified type has caused
+    .actions-content
+        each action in actionItems
+          if +action.number % 2 !== 0
+            .content-block
+              .block-info
+                span.block-info__number #{action.number}
+                .block-info__wrapper
+                  h1.block-info__title #{action.title}
+                  p.block-info__description #{action.text}
+              .block-img
+                img(class="block-img__image", src=action.imgPath, alt="Illustration")
+          else
+            .content-block
+              .block-img
+                img(class="block-img__image", src=action.imgPath, alt="Illustration")
+              .block-info
+                span.block-info__number #{action.number}
+                .block-info__wrapper
+                  h1.block-info__title #{action.title}
+                  p.block-info__description #{action.text}
+        img(
+          class="actions-content__virus-icon",
+          src="../img/svg/icons/viruses/virus-icon-2.svg",
+          alt="Virus"
+        )
+        img(
+          class="actions-content__virus-group",
+          src="../img/svg/icons/viruses/virus-group-2.svg",
+          alt="Virus"
+        )

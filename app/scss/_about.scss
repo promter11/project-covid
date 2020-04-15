@@ -12,6 +12,10 @@
   }
 
   &-info {
+    &__description {
+      max-width: 610px;
+    }
+
     &__button {
       border: 2px solid $main-light-color;
 
@@ -29,7 +33,7 @@
 
   &__figure {
     position: absolute;
-    bottom: -140px;
-    right: -41px;
+    bottom: -120px;
+    right: -240px;
   }
 }

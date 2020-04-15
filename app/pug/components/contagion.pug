@@ -1,4 +1,21 @@
-- var blockInfo = [{"title": "Air Transmission", "text": "Objectively evolve tactical expertise before extensible initiatives. Efficiently simplify", "imgPath": "../img/svg/illustrations/contagion/contagion-1.svg"}, {"title": "Human Contacts", "text": "Washing your hands is one of thesimplest ways you can protect", "imgPath": "../img/svg/illustrations/contagion/contagion-2.svg"}, {"title": "Containted Objects", "text": "Use the tissue while sneezing,In this way, you can protect your droplets", "imgPath": "../img/svg/illustrations/contagion/contagion-3.svg"}];
+-
+  var blockInfo = [
+    {
+      "title": "Air Transmission",
+      "text": "Objectively evolve tactical expertise before extensible initiatives. Efficiently simplify",
+      "imgPath": "../img/svg/illustrations/contagion/contagion-1.svg"
+    },
+    {
+      "title": "Human Contacts",
+      "text": "Washing your hands is one of thesimplest ways you can protect",
+      "imgPath": "../img/svg/illustrations/contagion/contagion-2.svg"
+    },
+    {
+      "title": "Containted Objects",
+      "text": "Use the tissue while sneezing,In this way, you can protect your droplets",
+      "imgPath": "../img/svg/illustrations/contagion/contagion-3.svg"
+    }
+  ];
 
 section.contagion
   .container
@@ -14,4 +31,8 @@ section.contagion
           img(class="content-block__img", src=item.imgPath, alt="Illustration")
           h2.content-block__title #{item.title}
           p.content-block__description #{item.text}
-      img(class="contagion-content__figure", src="../img/svg/icons/virus-icon.svg", alt="Virus")
+      img(
+        class="contagion-content__figure",
+        src="../img/svg/icons/viruses/virus-icon.svg",
+        alt="Virus"
+      )

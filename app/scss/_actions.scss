@@ -1,0 +1,72 @@
+.actions {
+  &-header {
+    text-align: center;
+
+    &__description {
+      max-width: 720px;
+
+      margin: 0 auto 80px auto;
+    }
+  }
+
+  &-content {
+    position: relative;
+
+    &__virus-icon {
+      position: absolute;
+      top: 440px;
+      left: -100px;
+      z-index: -5;
+    }
+
+    &__virus-group {
+      position: absolute;
+      bottom: 120px;
+      right: -240px;
+      z-index: -5;
+    }
+
+    .content-block {
+      display: flex;
+      align-items: center;
+
+      .block-info,
+      .block-img {
+        width: 50%;
+      }
+
+      .block-info {
+        display: flex;
+        align-items: flex-start;
+
+        &__number {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-shrink: 0;
+
+          width: 75px;
+          height: 75px;
+
+          font-size: 44px;
+          font-weight: bold;
+
+          margin-right: 40px;
+
+          border-radius: 50%;
+
+          background-color: $main-light-color;
+          color: $main-color;
+        }
+
+        &__description {
+          max-width: 530px;
+        }
+      }
+
+      .block-img {
+        text-align: center;
+      }
+    }
+  }
+}
