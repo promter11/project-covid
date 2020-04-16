@@ -6,6 +6,14 @@
       max-width: 720px;
 
       margin: 0 auto 80px auto;
+
+      @media (max-width: 576px) {
+        margin: 0 auto 20px auto;
+      }
+
+      @media (min-width: 576px) and (max-width: 768px) {
+        margin: 0 auto 40px auto;
+      }
     }
   }
 
@@ -17,6 +25,10 @@
       top: 440px;
       left: -100px;
       z-index: -5;
+
+      @media (max-width: 768px) {
+        display: none;
+      }
     }
 
     &__virus-group {
@@ -24,15 +36,32 @@
       bottom: 120px;
       right: -240px;
       z-index: -5;
+
+      @media (max-width: 768px) {
+        display: none;
+      }
+
+      @media (min-width: 768px) and (max-width: 1200px) {
+        bottom: 0;
+        right: 0;
+      }
     }
 
     .content-block {
       display: flex;
       align-items: center;
 
+      @media (max-width: 768px) {
+        flex-wrap: wrap;
+      }
+
       .block-info,
       .block-img {
         width: 50%;
+
+        @media (max-width: 768px) {
+          width: 100%;
+        }
       }
 
       .block-info {
@@ -57,15 +86,38 @@
 
           background-color: $main-light-color;
           color: $main-color;
+
+          @media (max-width: 576px) {
+            width: 45px;
+            height: 45px;
+
+            margin-right: 20px;
+          }
+
+          @media (max-width: 768px) {
+            font-size: 28px;
+          }
         }
 
         &__description {
           max-width: 530px;
+
+          @media (max-width: 768px) {
+            max-width: auto;
+          }
         }
       }
 
       .block-img {
         text-align: center;
+
+        @media (max-width: 576px) {
+          margin-bottom: 20px;
+        }
+
+        @media (min-width: 576px) and (max-width: 768px) {
+          margin-bottom: 40px;
+        }
       }
     }
   }

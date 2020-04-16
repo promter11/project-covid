@@ -1,15 +1,22 @@
-- var linkNames = ["Overview", "Contagion", "Symptomps", "Prevention"];
+-
+  var linkInfo = [
+    {"title": "Overview", "href": "#about"},
+    {"title": "Contagion", "href": "#contagion"},
+    {"title": "Symptomps", "href": "#symptomps"},
+    {"title": "Prevention", "href": "#actions"}
+  ];
 
-header.header
+header.header#header
   .container
     nav.header-nav
       a(class="header-nav__link", href="/")
         img(class="header-nav__logo", src="../img/svg/logo.svg", alt="Logo")
       ul.nav-list
-        li.nav-list__item
-          each name in linkNames
-            a(class="nav-list__link", href="/") #{name}
-          button(class="nav-list__button" type="button") Contact
+        each link in linkInfo
+          li.nav-list__item
+            a(class="nav-list__link", href=link.href) #{link.title}
+        button(class="nav-list__button" type="button") Contact
+        img(class="nav-list__close-button", src="../img/svg/icons/close-icon.svg", alt="Close")
       .nav-burger
         - for (var i = 0; i < 3; i++)
           span.nav-burger__item

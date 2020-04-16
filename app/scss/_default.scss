@@ -15,6 +15,10 @@ header,
 section,
 footer {
   padding: 40px 0;
+
+  @media (max-width: 576px) {
+    padding: 20px 0;
+  }
 }
 
 h1,
@@ -33,10 +37,20 @@ h1 {
   font-size: 42px;
 
   margin-bottom: 40px;
+
+  @media (max-width: 576px) {
+    font-size: 28px;
+
+    margin-bottom: 20px;
+  }
 }
 
 h2 {
   font-size: 36px;
+
+  @media (max-width: 576px) {
+    font-size: 24px;
+  }
 }
 
 h3 {
@@ -45,6 +59,10 @@ h3 {
   margin-bottom: 5px;
 
   color: $main-color;
+
+  @media (max-width: 576px) {
+    font-size: 18px;
+  }
 }
 
 p {
@@ -55,6 +73,12 @@ p {
   margin-bottom: 40px;
 
   color: $text-color;
+
+  @media (max-width: 576px) {
+    font-size: 14px;
+
+    margin-bottom: 20px;
+  }
 }
 
 ul {
@@ -97,9 +121,9 @@ button {
   padding: 12px 36px;
 
   border: 2px solid $main-color;
-  border-radius: 65px;
+  border-radius: 64px;
 
-  box-shadow: 0px 8px 87px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 8px 86px rgba(0, 0, 0, 0.1);
 
   cursor: pointer;
 
@@ -107,4 +131,8 @@ button {
 
   background-color: transparent;
   color: $main-color;
+
+  @media (max-width: 576px) {
+    font-size: 14px;
+  }
 }

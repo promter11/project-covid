@@ -1,1 +1,0 @@
-const getMessage = message => message;

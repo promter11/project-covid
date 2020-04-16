@@ -1,4 +1,11 @@
-- var linkNames = ["Overview", "Contagion", "Symptomps", "Prevention"];
+-
+  var linkInfo = [
+    {"title": "Overview", "href": "#about"},
+    {"title": "Contagion", "href": "#contagion"},
+    {"title": "Symptomps", "href": "#symptomps"},
+    {"title": "Prevention", "href": "#actions"}
+  ];
+
 -
   var socialInfo = [
     {
@@ -23,18 +30,18 @@
     }
   ];
 
-footer.footer
+footer.footer#footer
   .container
     nav.footer-nav
       a(class="footer-block__link", href="/")
         img(class="footer-block__logo", src="../img/svg/logo.svg", alt="Logo")
       ul.nav-list
-        li.nav-list__item
-          each name in linkNames
-            a(class="nav-list__link", href="/") #{name}
+        each link in linkInfo
+          li.nav-list__item
+            a(class="nav-list__link", href=link.href) #{link.title}
       .social
         each social in socialInfo
-          a(class="social__link", href=social.link)
+          a(class="social__link", href=social.link, target="_blank")
             img(class="social__icon", src=social.path, alt=social.social)
     .footer-block
       span.footer-block__disclaimer
