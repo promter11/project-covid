@@ -50,32 +50,22 @@ section.actions#actions
         | Corona viruses are a type of virus. There are many different
         | kinds, and some cause disease. A newly identified type has caused
     .actions-content
-        each action in actionItems
-          if +action.number % 2 !== 0
-            .content-block
-              .block-info
-                span.block-info__number #{action.number}
-                .block-info__wrapper
-                  h1.block-info__title #{action.title}
-                  p.block-info__description #{action.text}
-              .block-img
-                img(class="block-img__image", src=action.imgPath, alt="Illustration")
-          else
-            .content-block
-              .block-img
-                img(class="block-img__image", src=action.imgPath, alt="Illustration")
-              .block-info
-                span.block-info__number #{action.number}
-                .block-info__wrapper
-                  h1.block-info__title #{action.title}
-                  p.block-info__description #{action.text}
-        img(
-          class="actions-content__virus-icon",
-          src="../img/svg/icons/viruses/virus-icon-2.svg",
-          alt="Virus"
-        )
-        img(
-          class="actions-content__virus-group",
-          src="../img/svg/icons/viruses/virus-group-2.svg",
-          alt="Virus"
-        )
+      each action in actionItems
+        .content-block
+          .block-info
+            span.block-info__number #{action.number}
+            .block-info__wrapper
+              h1.block-info__title #{action.title}
+              p.block-info__description #{action.text}
+          .block-img
+            img(class="block-img__image", src=action.imgPath, alt="Illustration")
+      img(
+        class="actions-content__virus-icon",
+        src="../img/svg/icons/viruses/virus-icon-2.svg",
+        alt="Virus"
+      )
+      img(
+        class="actions-content__virus-group",
+        src="../img/svg/icons/viruses/virus-group-2.svg",
+        alt="Virus"
+      )
