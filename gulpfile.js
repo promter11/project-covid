@@ -109,35 +109,6 @@ gulp.task('minify-images', () => {
 });
 
 /*
- * Инициализируем таск, минифицирующий все CSS библиотеки
- * из папки libs в единый libs.min.css файл
- */
-
-gulp.task('minify-css-libs', () => {
-	return gulp.src([
-			'app/libs/bootstrap/bootstrap.min.css'
-	])
-		.pipe(cleanCSS())
-		.pipe(concat('libs.min.css'))
-		.pipe(gulp.dest('app/libs'));
-});
-
-/*
- * Инициализируем таск, минифицирующий все JS библиотеки
- * из папки libs в единый libs.min.js файл
- */
-
-gulp.task('minify-js-libs', () => {
-	return gulp.src([
-		'app/libs/jquery/jquery-3.4.1.min.js',
-		'app/libs/bootstrap/bootstrap.min.js'
-	])
-		.pipe(uglify())
-		.pipe(concat('libs.min.js'))
-		.pipe(gulp.dest('app/libs'));
-});
-
-/*
  * Инициализируем таск, собирающий все файлы проекта для отправки в папку build
  */
 
@@ -173,10 +144,6 @@ gulp.task('build-app', (done) => {
 	const buildFonts =
 		gulp.src('app/fonts/**/*')
 			.pipe(gulp.dest('build/fonts'));
-
-	const buildLibs =
-		gulp.src('app/libs/**/*')
-			.pipe(gulp.dest('build/libs'));
 
 	done();
 });
@@ -222,8 +189,6 @@ gulp.task(
 		'pug',
 		'combine-scripts',
 		'minify-html',
-		'minify-css-libs',
-		'minify-js-libs',
 		'minify-images',
 		'build-app'
 	)

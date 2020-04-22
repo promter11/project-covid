@@ -1,11 +1,11 @@
-const burger = document.querySelector(".nav-burger");
-const closeButton = document.querySelector(".nav-list__close-button");
+(() => {
+  const
+    burger      = document.querySelector(".nav-burger"),
+    closeButton = document.querySelector(".nav-list__close-button"),
+    navigation  = document.querySelector(".header .nav-list");
+  
+  const toggleCloseButton = () => navigation.classList.toggle("nav-list--active");
 
-const toggleCloseButton = () => {
-  const navigation = document.querySelector(".header .nav-list");
-
-  navigation.classList.toggle("nav-list--active");
-};
-
-burger.addEventListener("click", toggleCloseButton);
-closeButton.addEventListener("click", toggleCloseButton);
+  burger.addEventListener("click", toggleCloseButton);
+  closeButton.addEventListener("click", toggleCloseButton);
+})();

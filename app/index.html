@@ -151,11 +151,24 @@
 					<div class="stats-wrapper">
 						<div class="stats-map"><img class="stats-map__item" src="../img/svg/map.svg" alt="Map"></div>
 						<div class="stats-block">
-							<div class="block-header">
-								<h2 class="block-header__title">Live reports</h2>
-								<div class="block-elements"><img class="block-elements__arrow" src="../img/svg/icons/arrows/arrow-left.svg" alt="Arrow"><img class="block-elements__arrow" src="../img/svg/icons/arrows/arrow-right.svg" alt="Arrow"></div>
+							<div class="block-wrapper">
+								<div class="block-header">
+									<h2 class="block-header__title">Live reports</h2>
+									<div class="block-elements">
+										<button class="block-elements__button block-elements__button--left" disabled>
+											<svg class="block-elements__arrow" width="11" height="19" viewBox="0 0 11 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M9.22201 16.8869L1.87891 9.54379L9.22201 2.20068" stroke="#F44A45" stroke-width="2.85" stroke-linecap="round" stroke-linejoin="round"></path>
+											</svg>
+										</button>
+										<button class="block-elements__button block-elements__button--right">
+											<svg class="block-elements__arrow" width="11" height="19" viewBox="0 0 11 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M2.18485 2.06794L9.52795 9.41104L2.18485 16.7541" stroke="#F44A45" stroke-width="2.85" stroke-linecap="round" stroke-linejoin="round"></path>
+											</svg>
+										</button>
+									</div>
+								</div>
+								<div class="block-content"></div>
 							</div>
-							<div class="block-content"></div>
 						</div>
 					</div>
 				</div>
@@ -193,6 +206,15 @@
 						<a class="footer-block__link" href="http://www.pixelspark.co" target="_blank">pixelspark.co</a></span></div>
 			</div>
 		</footer>
+		<div class="modal">
+			<div class="modal-block"><img class="modal-block__img" src="../img/svg/icons/check-icon.svg" alt="Check Icon">
+				<h2 class="modal-block__title">Awesome!</h2>
+				<p class="modal-block__description">You have been successfully subscribed to our newsletters.</p>
+				<svg class="modal-block__close-button" viewBox="0 0 386.667 386.667" xmlns="http://www.w3.org/2000/svg">
+					<path fill="#4b4f51" d="m386.667 45.564-45.564-45.564-147.77 147.769-147.769-147.769-45.564 45.564 147.769 147.769-147.769 147.77 45.564 45.564 147.769-147.769 147.769 147.769 45.564-45.564-147.768-147.77z"></path>
+				</svg>
+			</div>
+		</div>
 		<script src="../js/scripts.min.js"></script>
 	</body>
 </html>
