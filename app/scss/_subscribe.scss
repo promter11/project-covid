@@ -1,13 +1,5 @@
 .subscribe {
-  padding: 90px 0;
-
-  @media (max-width: 576px) {
-    padding: 20px 0;
-  }
-
-  @media (min-width: 576px) and (max-width: 768px) {
-    padding: 40px 0;
-  }
+  @include prop-media("padding", 576px, 768px, 20px 0, 40px 0, 90px 0);
 
   &__wrapper {
     position: relative;
@@ -21,32 +13,15 @@
     text-align: center;
 
     &__title {
-      font-size: 64px;
+      @include prop-media("font-size", 576px, 768px, 28px, 42px, 64px);
 
       color: $green-color;
-
-      @media (max-width: 576px) {
-        font-size: 28px;
-      }
-
-      @media (min-width: 576px) and (max-width: 768px) {
-        font-size: 42px;
-      }
     }
 
     &__virus-group {
-      position: absolute;
-      bottom: -80px;
-      right: -240px;
-      z-index: -5;
+      @include img-absolute("bottom", "right", -80px, -240px);
 
-      @media (max-width: 768px) {
-        display: none;
-      }
-
-      @media (min-width: 768px) and (max-width: 1200px) {
-        right: 0;
-      }
+      @extend .hide;
     }
   }
 
@@ -56,9 +31,13 @@
     &__input {
       width: 100%;
 
-      font-size: 20px;
-
-      padding: 30px 210px 30px 30px;
+      @include prop-media-2("font-size", 768px, 14px, 20px);
+      @include prop-media-2(
+        "padding",
+        768px,
+        30px 150px 30px 30px,
+        30px 210px 30px 30px
+      );
 
       border: 1px solid transparent;
       border-radius: 58px;
@@ -69,12 +48,6 @@
 
       background-color: #fff;
       color: $text-color;
-
-      @media (max-width: 768px) {
-        font-size: 14px;
-
-        padding: 30px 150px 30px 30px;
-      }
 
       &:focus::placeholder {
         color: transparent;
@@ -97,14 +70,10 @@
       right: 20px;
       transform: translateY(-50%);
 
-      padding: 16px 64px;
+      @include prop-media-2("padding", 768px, 16px 32px, 16px 64px);
 
       background-color: $main-color;
       color: #fff;
-
-      @media (max-width: 768px) {
-        padding: 16px 32px;
-      }
 
       &:hover {
         background-color: transparent;

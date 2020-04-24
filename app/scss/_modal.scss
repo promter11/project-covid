@@ -6,7 +6,6 @@
   bottom: 0;
 
   opacity: 0;
-
   visibility: hidden;
 
   transition: all 0.5s ease-in-out;
@@ -15,7 +14,6 @@
 
   &--active {
     opacity: 1;
-
     visibility: visible;
 
     transition: all 0.5s ease-in-out;
@@ -30,7 +28,7 @@
     max-width: 530px;
     width: 100%;
 
-    padding: 40px;
+    @include prop-media-2("padding", 768px, 20px, 40px);
 
     text-align: center;
 
@@ -40,8 +38,6 @@
 
     @media (max-width: 768px) {
       max-width: 90%;
-
-      padding: 20px;
     }
 
     &__img {

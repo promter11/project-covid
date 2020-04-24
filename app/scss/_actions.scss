@@ -5,15 +5,14 @@
     &__description {
       max-width: 720px;
 
-      margin: 0 auto 80px auto;
-
-      @media (max-width: 576px) {
-        margin: 0 auto 20px auto;
-      }
-
-      @media (min-width: 576px) and (max-width: 768px) {
-        margin: 0 auto 40px auto;
-      }
+      @include prop-media(
+        "margin",
+        576px,
+        768px,
+        0 auto 20px auto,
+        0 auto 40px auto,
+        0 auto 80px auto
+      );
     }
   }
 
@@ -21,10 +20,7 @@
     position: relative;
 
     &__virus-icon {
-      position: absolute;
-      top: 440px;
-      left: -100px;
-      z-index: -5;
+      @include img-absolute("top", "left", 440px, -100px);
 
       @media (max-width: 768px) {
         display: none;
@@ -32,18 +28,12 @@
     }
 
     &__virus-group {
-      position: absolute;
-      bottom: 120px;
-      right: -240px;
-      z-index: -5;
+      @include img-absolute("bottom", "right", 120px, -240px);
 
-      @media (max-width: 768px) {
-        display: none;
-      }
+      @extend .hide;
 
       @media (min-width: 768px) and (max-width: 1200px) {
         bottom: 0;
-        right: 0;
       }
     }
 
@@ -65,11 +55,7 @@
 
       .block-info,
       .block-img {
-        width: 50%;
-
-        @media (max-width: 768px) {
-          width: 100%;
-        }
+        @extend .w-50;
       }
 
       .block-info {
@@ -85,10 +71,10 @@
           width: 75px;
           height: 75px;
 
-          font-size: 44px;
           font-weight: bold;
 
-          margin-right: 40px;
+          @include prop-media-2("margin-right", 576px, 20px, 40px);
+          @include prop-media-2("font-size", 768px, 28px, 42px);
 
           border-radius: 50%;
 
@@ -98,34 +84,25 @@
           @media (max-width: 576px) {
             width: 45px;
             height: 45px;
-
-            margin-right: 20px;
-          }
-
-          @media (max-width: 768px) {
-            font-size: 28px;
           }
         }
 
         &__description {
           max-width: 530px;
-
-          @media (max-width: 768px) {
-            max-width: auto;
-          }
         }
       }
 
       .block-img {
         text-align: center;
 
-        @media (max-width: 576px) {
-          margin-bottom: 20px;
-        }
-
-        @media (min-width: 576px) and (max-width: 768px) {
-          margin-bottom: 40px;
-        }
+        @include prop-media(
+          "margin",
+          576px,
+          768px,
+          0,
+          0 auto 20px auto,
+          0 auto 40px auto
+        );
       }
     }
   }

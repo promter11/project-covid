@@ -4,15 +4,7 @@
     justify-content: space-between;
     align-items: center;
 
-    margin-bottom: 60px;
-
-    @media (max-width: 576px) {
-      margin-bottom: 20px;
-    }
-
-    @media (min-width: 576px) and (max-width: 768px) {
-      margin-bottom: 40px;
-    }
+    @include prop-media("margin-bottom", 576px, 768px, 20px, 40px, 60px);
 
     .nav-list {
       display: flex;
@@ -39,20 +31,24 @@
       }
 
       &__item {
-        margin-right: 40px;
+        @include prop-media(
+          "margin",
+          576px,
+          992px,
+          20px 0,
+          0 20px 0 0,
+          0 40px 0 0
+        );
 
         @media (max-width: 768px) {
-          margin: 20px 0;
-        }
-
-        @media (min-width: 768px) and (max-width: 992px) {
-          margin-right: 30px;
+          margin: 0 0 20px 0 !important;
         }
       }
 
       &__link {
-        font-size: 18px;
         line-height: 22px;
+
+        @include prop-media-2("font-size", 992px, 14px, 18px);
 
         @media (max-width: 768px) {
           color: #fff;
@@ -61,18 +57,12 @@
             color: $main-color;
           }
         }
-
-        @media (max-width: 992px) {
-          font-size: 14px;
-        }
       }
 
       &__button {
-        font-size: 18px;
+        @include prop-media-2("font-size", 992px, 14px, 18px);
 
         @media (max-width: 768px) {
-          margin: 20px 0;
-
           border: 2px solid #fff;
 
           color: #fff;
@@ -84,8 +74,6 @@
         }
 
         @media (max-width: 992px) {
-          font-size: 14px;
-
           box-shadow: none;
         }
 
@@ -154,19 +142,11 @@
 
     .content-info,
     .content-img {
-      width: 50%;
-
-      @media (max-width: 768px) {
-        width: 100%;
-      }
+      @extend .w-50;
 
       &__title,
       &__description {
-        margin-bottom: 40px;
-
-        @media (max-width: 768px) {
-          margin-bottom: 20px;
-        }
+        @include prop-media-2("margin-bottom", 768px, 20px, 40px);
       }
 
       &__button {
@@ -179,10 +159,6 @@
 
     .content-info {
       max-width: 530px;
-
-      @media (max-width: 768px) {
-        max-width: auto;
-      }
     }
 
     .content-img {
@@ -190,9 +166,7 @@
       right: -120px;
       z-index: -5;
 
-      @media (max-width: 768px) {
-        display: none;
-      }
+      @extend .hide;
 
       @media (min-width: 768px) and (max-width: 1200px) {
         position: static;

@@ -4,24 +4,16 @@
     justify-content: space-between;
     align-items: center;
 
-    margin-bottom: 20px;
+    @include prop-media-2("margin-bottom", 992px, 0, 20px);
 
     @media (max-width: 992px) {
       flex-wrap: wrap;
       justify-content: center;
-
-      margin-bottom: 0;
     }
 
     .nav-list,
     .social {
-      @media (max-width: 576px) {
-        margin-bottom: 20px;
-      }
-
-      @media (min-width: 576px) and (max-width: 992px) {
-        margin-bottom: 40px;
-      }
+      @include prop-media("margin-bottom", 576px, 992px, 0, 20px, 40px);
 
       @media (max-width: 992px) {
         width: 100%;
@@ -29,11 +21,7 @@
 
       &__item {
         &:not(:last-child) {
-          margin-right: 40px;
-
-          @media (max-width: 576px) {
-            margin-right: 0;
-          }
+          @include prop-media-2("margin-right", 576px, 0, 40px);
         }
       }
     }
@@ -78,13 +66,7 @@
     text-align: center;
 
     &__link {
-      @media (max-width: 576px) {
-        margin-bottom: 20px;
-      }
-
-      @media (min-width: 576px) and (max-width: 992px) {
-        margin-bottom: 40px;
-      }
+      @include prop-media("margin-bottom", 576px, 992px, 0, 20px, 40px);
     }
   }
 }

@@ -1,0 +1,33 @@
+@mixin prop-media(
+  $prop,
+  $min-width,
+  $max-width,
+  $min-value,
+  $mid-value,
+  $max-value
+) {
+  #{$prop}: $max-value;
+
+  @media (max-width: $min-width) {
+    #{$prop}: $mid-value;
+  }
+
+  @media (min-width: $min-width) and (max-width: $max-width) {
+    #{$prop}: $mid-value;
+  }
+}
+
+@mixin prop-media-2($prop, $media, $min-value, $max-value) {
+  #{$prop}: $max-value;
+
+  @media (max-width: $media) {
+    #{$prop}: $min-value;
+  }
+}
+
+@mixin img-absolute($prop, $prop2, $bottom, $right) {
+  position: absolute;
+  #{$prop}: $bottom;
+  #{$prop2}: $right;
+  z-index: -5;
+}

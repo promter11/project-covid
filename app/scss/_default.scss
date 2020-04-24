@@ -7,18 +7,14 @@
 
 body {
   font-family: "Red Hat Display", sans-serif;
-
-  overflow-x: hidden;
 }
 
 header,
 section,
 footer {
-  padding: 40px 0;
+  @include prop-media-2("padding", 576px, 20px 0, 40px 0);
 
-  @media (max-width: 576px) {
-    padding: 20px 0;
-  }
+  overflow: hidden;
 }
 
 h1,
@@ -34,51 +30,30 @@ h2 {
 }
 
 h1 {
-  font-size: 42px;
-
-  margin-bottom: 40px;
-
-  @media (max-width: 576px) {
-    font-size: 28px;
-
-    margin-bottom: 20px;
-  }
+  @include prop-media-2("font-size", 576px, 28px, 42px);
+  @include prop-media-2("margin-bottom", 576px, 20px, 40px);
 }
 
 h2 {
-  font-size: 36px;
-
-  @media (max-width: 576px) {
-    font-size: 24px;
-  }
+  @include prop-media-2("font-size", 576px, 24px, 36px);
 }
 
 h3 {
-  font-size: 26px;
+  @include prop-media-2("font-size", 576px, 18px, 26px);
 
   margin-bottom: 5px;
 
   color: $main-color;
-
-  @media (max-width: 576px) {
-    font-size: 18px;
-  }
 }
 
 p {
-  font-size: 18px;
   line-height: 215%;
   text-transform: capitalize;
 
-  margin-bottom: 40px;
+  @include prop-media-2("font-size", 576px, 14px, 18px);
+  @include prop-media-2("margin-bottom", 576px, 20px, 40px);
 
   color: $text-color;
-
-  @media (max-width: 576px) {
-    font-size: 14px;
-
-    margin-bottom: 20px;
-  }
 }
 
 ul {
@@ -113,10 +88,11 @@ textarea {
 }
 
 button {
-  font-size: 16px;
   font-weight: 600;
   line-height: 24px;
   text-transform: capitalize;
+
+  @include prop-media-2("font-size", 576px, 14px, 16px);
 
   padding: 12px 36px;
 
@@ -131,8 +107,4 @@ button {
 
   background-color: transparent;
   color: $main-color;
-
-  @media (max-width: 576px) {
-    font-size: 14px;
-  }
 }

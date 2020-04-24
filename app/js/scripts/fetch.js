@@ -1,47 +1,44 @@
 (() => {
-  fetch(
-    "https://corona-virus-stats.herokuapp.com/api/v1/cases/countries-search?limit=200"
-  )
+  fetch("https://corona.lmao.ninja/v2/countries?sort=country")
     .then((response) => response.json())
-    .then(({ data: { rows } }) => {
-      const statsContentBlock = document.querySelector(".stats .block-content");
-  
-      let
-        statsItemCounter      = 0,
-        wrapperElementNumber  = 1;
-  
-      rows.map(
-        ({ flag, country, country_abbreviation, total_cases, new_cases }) => {
-          const statsItemArrow =
-            +new_cases !== 0
+    .then((data) => {
+      const sortedData = data.sort((a, b) => b.cases - a.cases);
+
+      const contentBlock = document.createElement("div");
+      contentBlock.classList.add("block-content");
+
+      sortedData.map(
+        ({ countryInfo: { flag }, country, cases, todayCases }) => {
+          const statsItemArrowSrc =
+            +todayCases !== 0
               ? "../img/svg/icons/arrows/red-arrow.svg"
               : "../img/svg/icons/arrows/green-arrow.svg";
-  
-          if (statsItemCounter % 6 === 0) {
-            const statsItemsWrapper = '<div class="item-wrapper"></div>';
-  
-            statsContentBlock.insertAdjacentHTML("beforeend", statsItemsWrapper);
-  
-            if (statsItemCounter > 1) {
-              wrapperElementNumber++;
-            }
-          }
-  
+
           const statsItem = `
             <div class="content-item">
-              <img class="content-item__flag" src="${flag}" alt="${country_abbreviation} Flag" />
+              <img class="content-item__flag" src="${flag}" alt="Flag" />
               <span class="content-item__country">${country}</span>
-              <span class="item__value">${total_cases}</span>
-              <img class="item__arrow" src="${statsItemArrow}" alt="Arrow">
+              <span class="item__value">${cases.toLocaleString()}</span>
+              <img class="item__arrow" src="${statsItemArrowSrc}" alt="Arrow">
             </div>
           `;
-  
-          ++statsItemCounter;
-  
-          document
-            .querySelector(`.item-wrapper:nth-child(${wrapperElementNumber})`)
-            .insertAdjacentHTML("beforeend", statsItem);
+
+          contentBlock.insertAdjacentHTML("beforeend", statsItem);
         }
       );
-    });  
+
+      const statsBlockWrapper = document.querySelector(".stats .block-wrapper");
+
+      statsBlockWrapper.append(contentBlock);
+    })
+    .catch((err) => {
+      const
+        headerBlock   = document.querySelector(".stats .block-header"),
+        errorBlock    = document.querySelector(".stats .error-boundry");
+      
+      headerBlock.classList.add('block-header--hidden');
+      errorBlock.classList.remove('error-boundry--hidden');
+
+      throw new Error(err);
+    });
 })();
