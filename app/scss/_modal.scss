@@ -28,7 +28,7 @@
     max-width: 530px;
     width: 100%;
 
-    @include prop-media-2("padding", 768px, 20px, 40px);
+    @include prop-media-single("padding", 768px, 20px, 40px);
 
     text-align: center;
 
@@ -41,15 +41,10 @@
     }
 
     &__img {
-      width: 120px;
-      height: 120px;
+      @include prop-media-single("width", 768px, 90px, 120px);
+      @include prop-media-single("height", 768px, 90px, 120px);
 
       margin-bottom: 20px;
-
-      @media (max-width: 768px) {
-        width: 90px;
-        height: 90px;
-      }
     }
 
     &__title {
@@ -67,8 +62,8 @@
 
     &__close-button {
       position: absolute;
-      top: 30px;
-      right: 30px;
+      @include prop-media-single("top", 768px, 10px, 30px);
+      @include prop-media-single("right", 768px, 10px, 30px);
 
       width: 45px;
       height: 45px;
@@ -76,11 +71,6 @@
       padding: 10px;
 
       cursor: pointer;
-
-      @media (max-width: 768px) {
-        top: 10px;
-        right: 10px;
-      }
     }
   }
 }

@@ -41,6 +41,8 @@
       display: flex;
       align-items: center;
 
+      @include prop-media("margin-bottom", 576px, 768px, 20px, 40px, 0);
+
       &:nth-child(2n) {
         flex-direction: row-reverse;
 
@@ -68,23 +70,16 @@
           align-items: center;
           flex-shrink: 0;
 
-          width: 75px;
-          height: 75px;
-
           font-weight: bold;
 
-          @include prop-media-2("margin-right", 576px, 20px, 40px);
-          @include prop-media-2("font-size", 768px, 28px, 42px);
+          @include prop-media-single("margin-right", 576px, 20px, 40px);
+          @include prop-media-single("width", 768px, 45px, 75px);
+          @include prop-media-single("height", 768px, 45px, 75px);
+          @include prop-media-single("font-size", 768px, 28px, 42px);
 
           border-radius: 50%;
 
-          background-color: $main-light-color;
-          color: $main-color;
-
-          @media (max-width: 576px) {
-            width: 45px;
-            height: 45px;
-          }
+          @include background-set($main-light-color, $main-color);
         }
 
         &__description {

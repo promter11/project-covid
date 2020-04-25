@@ -10,16 +10,17 @@ html
     link(rel="icon", href="../favicon.png")
     link(rel="stylesheet", href="../css/main.min.css")
   body
-    include ./components/header.pug
-    main.main
-      include ./components/about.pug
-      include ./components/contagion.pug
-      include ./components/symptomps.pug
-      include ./components/actions.pug
-      include ./components/stats.pug
-      include ./components/subscribe.pug
-    include ./components/footer.pug
-    
-    include ./components/modal.pug
+    .app
+      include ./components/header.pug
+      main.main
+        include ./components/about.pug
+        include ./components/contagion.pug
+        include ./components/symptomps.pug
+        include ./components/actions.pug
+        include ./components/stats.pug
+        include ./components/subscribe.pug
+      include ./components/footer.pug
+      
+      include ./components/modal.pug
 
     script(src="../js/scripts.min.js")

@@ -1,8 +1,8 @@
 (() => {
   const
-    burger      = document.querySelector(".nav-burger"),
-    closeButton = document.querySelector(".nav-list__close-button"),
-    navigation  = document.querySelector(".header .nav-list");
+    burger      = document.querySelector(".header .nav-burger"),
+    navigation  = document.querySelector(".header .nav-list"),
+    closeButton = document.querySelector(".header .nav-list__close-button");
   
   const toggleCloseButton = () =>
     navigation.classList.toggle("nav-list--active");

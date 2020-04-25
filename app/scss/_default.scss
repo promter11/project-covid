@@ -12,9 +12,7 @@ body {
 header,
 section,
 footer {
-  @include prop-media-2("padding", 576px, 20px 0, 40px 0);
-
-  overflow: hidden;
+  @include prop-media-single("padding", 576px, 20px 0, 40px 0);
 }
 
 h1,
@@ -30,16 +28,16 @@ h2 {
 }
 
 h1 {
-  @include prop-media-2("font-size", 576px, 28px, 42px);
-  @include prop-media-2("margin-bottom", 576px, 20px, 40px);
+  @include prop-media-single("font-size", 576px, 28px, 42px);
+  @include prop-media-single("margin-bottom", 576px, 20px, 40px);
 }
 
 h2 {
-  @include prop-media-2("font-size", 576px, 24px, 36px);
+  @include prop-media-single("font-size", 576px, 24px, 36px);
 }
 
 h3 {
-  @include prop-media-2("font-size", 576px, 18px, 26px);
+  @include prop-media-single("font-size", 576px, 18px, 26px);
 
   margin-bottom: 5px;
 
@@ -50,8 +48,8 @@ p {
   line-height: 215%;
   text-transform: capitalize;
 
-  @include prop-media-2("font-size", 576px, 14px, 18px);
-  @include prop-media-2("margin-bottom", 576px, 20px, 40px);
+  @include prop-media-single("font-size", 576px, 14px, 18px);
+  @include prop-media-single("margin-bottom", 576px, 20px, 40px);
 
   color: $text-color;
 }
@@ -92,7 +90,7 @@ button {
   line-height: 24px;
   text-transform: capitalize;
 
-  @include prop-media-2("font-size", 576px, 14px, 16px);
+  @include prop-media-single("font-size", 576px, 14px, 16px);
 
   padding: 12px 36px;
 
@@ -105,6 +103,5 @@ button {
 
   transition: all 0.25s ease-in-out;
 
-  background-color: transparent;
-  color: $main-color;
+  @include background-set(transparent, $main-color);
 }

@@ -4,7 +4,7 @@
     justify-content: space-between;
     align-items: center;
 
-    @include prop-media-2("margin-bottom", 992px, 0, 20px);
+    @include prop-media-single("margin-bottom", 992px, 0, 20px);
 
     @media (max-width: 992px) {
       flex-wrap: wrap;
@@ -13,7 +13,7 @@
 
     .nav-list,
     .social {
-      @include prop-media("margin-bottom", 576px, 992px, 0, 20px, 40px);
+      @include prop-media("margin-bottom", 576px, 992px, 20px, 40px, 0);
 
       @media (max-width: 992px) {
         width: 100%;
@@ -21,7 +21,7 @@
 
       &__item {
         &:not(:last-child) {
-          @include prop-media-2("margin-right", 576px, 0, 40px);
+          @include prop-media-single("margin-right", 576px, 0, 40px);
         }
       }
     }
@@ -66,7 +66,7 @@
     text-align: center;
 
     &__link {
-      @include prop-media("margin-bottom", 576px, 992px, 0, 20px, 40px);
+      @include prop-media("margin-bottom", 576px, 992px, 20px, 40px, 0);
     }
   }
 }

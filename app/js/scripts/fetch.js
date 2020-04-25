@@ -1,4 +1,11 @@
+let fetchStatus = false;
+
 (() => {
+  const
+    headerBlock       = document.querySelector(".stats .block-header"),
+    statsBlockWrapper = document.querySelector(".stats .block-wrapper"),
+    errorBlock        = document.querySelector(".stats .error-boundry");
+
   fetch("https://corona.lmao.ninja/v2/countries?sort=country")
     .then((response) => response.json())
     .then((data) => {
@@ -26,18 +33,15 @@
           contentBlock.insertAdjacentHTML("beforeend", statsItem);
         }
       );
-
-      const statsBlockWrapper = document.querySelector(".stats .block-wrapper");
-
+      
       statsBlockWrapper.append(contentBlock);
+
+      headerBlock.classList.remove("block-header--hidden");
+
+      fetchStatus = true;
     })
     .catch((err) => {
-      const
-        headerBlock   = document.querySelector(".stats .block-header"),
-        errorBlock    = document.querySelector(".stats .error-boundry");
-      
-      headerBlock.classList.add('block-header--hidden');
-      errorBlock.classList.remove('error-boundry--hidden');
+      errorBlock.classList.remove("error-boundry--hidden");
 
       throw new Error(err);
     });

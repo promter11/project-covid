@@ -23,14 +23,12 @@
     &__button {
       border: 2px solid $main-light-color;
 
-      background-color: $main-light-color;
-      color: $main-color;
+      @include background-set($main-light-color, $main-color);
 
       &:hover {
         border: 2px solid $main-color;
 
-        background-color: $main-color;
-        color: #fff;
+        @include background-set($main-color, #fff);
       }
     }
   }
