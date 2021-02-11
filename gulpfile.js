@@ -113,28 +113,12 @@ gulp.task('minify-images', () => {
  */
 
 gulp.task('build-app', (done) => {
-
-	const buildPug =
-		gulp.src('app/pug/**/*')
-			.pipe(gulp.dest('build/pug'));
-
-	const buildExpandedCss =
-		gulp.src('app/scss/**/*.scss')
-			.pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
-			.pipe(autoprefixer({cascade: 'false'}))
-			.pipe(gulp.dest('build/css'));
-
 	const buildMinifiedCss =
 		gulp.src('app/css/*.css')
 			.pipe(gulp.dest('build/css'));
-
-	const buildExpandedJs =
-		gulp.src('app/js/scripts/**/*.js')
-			.pipe(concat('scripts.js'))
-			.pipe(gulp.dest('build/js'));
 	
 	const buildMinifiedJs =
-		gulp.src('app/js/**/*.js')
+		gulp.src('app/js/*.js')
 			.pipe(gulp.dest('build/js'));
 	
 	const buildImg =

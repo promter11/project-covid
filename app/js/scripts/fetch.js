@@ -1,5 +1,3 @@
-let fetchStatus = false;
-
 (() => {
   const
     headerBlock       = document.querySelector(".stats .block-header"),
@@ -9,10 +7,11 @@ let fetchStatus = false;
   fetch("https://corona.lmao.ninja/v2/countries?sort=country")
     .then((response) => response.json())
     .then((data) => {
-      const sortedData = data.sort((a, b) => b.cases - a.cases);
-
       const contentBlock = document.createElement("div");
+
       contentBlock.classList.add("block-content");
+
+      const sortedData = data.sort((a, b) => b.cases - a.cases);
 
       sortedData.map(
         ({ countryInfo: { flag }, country, cases, todayCases }) => {
@@ -38,7 +37,7 @@ let fetchStatus = false;
 
       headerBlock.classList.remove("block-header--hidden");
 
-      fetchStatus = true;
+      fetchStatus = !fetchStatus;
     })
     .catch((err) => {
       errorBlock.classList.remove("error-boundry--hidden");

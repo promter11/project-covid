@@ -130,8 +130,12 @@
           &__country {
             font-size: 16px;
             font-weight: 600;
+            white-space: nowrap;
+            text-overflow: ellipsis;
 
             margin-right: auto;
+
+            overflow: hidden;
 
             color: $additional-color;
           }
@@ -140,7 +144,7 @@
             font-size: 14px;
             font-weight: 600;
 
-            margin-right: 20px;
+            margin: 0 20px;
 
             color: $additional-color;
           }
