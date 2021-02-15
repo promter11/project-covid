@@ -124,6 +124,10 @@ gulp.task('build-app', (done) => {
 	const buildImg =
 		gulp.src('app/img/**/*')
 			.pipe(gulp.dest('build/img'));
+	
+	const buildFavicon =
+		gulp.src("app/favicon.png")
+			.pipe(gulp.dest("build"));
 
 	const buildFonts =
 		gulp.src('app/fonts/**/*')
